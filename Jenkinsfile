@@ -30,6 +30,7 @@ pipeline {
         stage('Deploy') {
           steps {
             echo 'Deploying Application'
+            input(message: 'Should Deployment run??', id: 'Ok')
           }
         }
 
