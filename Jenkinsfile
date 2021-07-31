@@ -26,10 +26,14 @@ pipeline {
     }
 
     stage('Deploy') {
+      when{
+        branch 'master'
+      }
       parallel {
         stage('Deploy') {
           steps {
             echo 'Deploying Application'
+            input(message: 'Should Deployment run??', id: 'Ok')
           }
         }
 
