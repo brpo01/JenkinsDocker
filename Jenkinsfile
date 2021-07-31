@@ -26,8 +26,19 @@ pipeline {
     }
 
     stage('Deploy') {
-      steps {
-        echo 'Deploying Application'
+      parallel {
+        stage('Deploy') {
+          steps {
+            echo 'Deploying Application'
+          }
+        }
+
+        stage('Artifact') {
+          steps {
+            archiveArtifacts 'text.txt'
+          }
+        }
+
       }
     }
 
