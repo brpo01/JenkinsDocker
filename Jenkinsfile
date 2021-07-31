@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
           steps {
             echo 'Testing Application'
-            echo '"This is Jenkins project path- ${JenkinsDocumentPath}"'
+            echo "This is Jenkins project path- ${JenkinsDocumentPath}"
           }
         }
 
