@@ -25,4 +25,7 @@ pipeline {
     }
 
   }
+  environment {
+    JenikinsDocumentPath = '"C:\\Users\\Praise\\Documents\\jenkins-projects"'
+  }
 }
